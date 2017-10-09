@@ -13,10 +13,21 @@ import dagger.Provides;
  */
 
 @Module
-public class RefrigeratorModuleTest {
+// This is a dependency provider for Refrigerator
+public class RefrigeratorModule {
+
+    private boolean mIsTest;
+
+    public RefrigeratorModule(boolean isTest) {
+        mIsTest = isTest;
+    }
 
     @Provides
     Refrigerator provideRefrigerator() {
-        return Mockito.mock(Refrigerator.class);
+        if (!mIsTest) {
+            return new SamsungRefrigerator();
+        } else {
+            return Mockito.mock(Refrigerator.class);
+        }
     }
 }

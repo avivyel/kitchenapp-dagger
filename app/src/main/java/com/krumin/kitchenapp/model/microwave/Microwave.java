@@ -1,8 +1,7 @@
 package com.krumin.kitchenapp.model.microwave;
 
 import com.krumin.kitchenapp.model.DoorState;
-import com.krumin.kitchenapp.model.FoodType;
-import com.krumin.kitchenapp.model.refrigerator.Meal;
+import com.krumin.kitchenapp.model.Meal;
 
 /**
  * Created by Krumin on 9/30/2017.
@@ -30,8 +29,8 @@ public abstract class Microwave {
     }
 
     /**
-     * @param durationSec duration in seconds to heat the current meal
-     * @return the meal after heating
+     * @param durationSec duration in seconds to heat the current Meal
+     * @return the Meal after heating
      */
     public Meal heat(int durationSec) {
         mCurrentMeal.setTemperature(durationSec * mHeatingRate);

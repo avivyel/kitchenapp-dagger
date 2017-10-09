@@ -2,6 +2,9 @@ package com.krumin.kitchenapp.module;
 
 import com.krumin.kitchenapp.model.microwave.Microwave;
 import com.krumin.kitchenapp.model.microwave.SamsungMicrowave;
+
+import org.mockito.Mockito;
+
 import dagger.Module;
 import dagger.Provides;
 
@@ -10,10 +13,21 @@ import dagger.Provides;
  */
 
 @Module
+// This is a dependency provider for Microwave
 public class MicrowaveModule {
+
+    private boolean mIsTest;
+
+    public MicrowaveModule(boolean isTest) {
+        mIsTest = isTest;
+    }
 
     @Provides
     Microwave provideMicrowave() {
-        return new SamsungMicrowave();
+        if (!mIsTest) {
+            return new SamsungMicrowave();
+        } else {
+            return Mockito.mock(Microwave.class);
+        }
     }
 }

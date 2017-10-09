@@ -1,6 +1,4 @@
-package com.krumin.kitchenapp.model.refrigerator;
-
-import com.krumin.kitchenapp.model.FoodType;
+package com.krumin.kitchenapp.model;
 
 /**
  * Created by Krumin on 9/30/2017.

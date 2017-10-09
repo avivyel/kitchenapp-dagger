@@ -2,6 +2,7 @@ package com.krumin.kitchenapp.model.refrigerator;
 
 import com.krumin.kitchenapp.model.DoorState;
 import com.krumin.kitchenapp.model.FoodType;
+import com.krumin.kitchenapp.model.Meal;
 
 /**
  * Created by Krumin on 9/30/2017.

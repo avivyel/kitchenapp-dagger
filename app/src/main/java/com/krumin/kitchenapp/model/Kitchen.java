@@ -1,8 +1,8 @@
 package com.krumin.kitchenapp.model;
 
 import com.krumin.kitchenapp.model.microwave.Microwave;
-import com.krumin.kitchenapp.model.refrigerator.Meal;
 import com.krumin.kitchenapp.model.refrigerator.Refrigerator;
+
 import javax.inject.Inject;
 
 /**
@@ -15,6 +15,7 @@ public class Kitchen {
     private Refrigerator mRefrigerator;
 
     @Inject
+    // Injection via constructor arguments
     public Kitchen(Microwave microwave, Refrigerator refrigerator) {
         mMicrowave = microwave;
         mRefrigerator = refrigerator;
